@@ -14,6 +14,7 @@ Some of the most common errors returned by the API are transformed to understand
 
     #set up logging if necessary
     logging.basicConfig(filename='bing_async.log',level=logging.DEBUG)
+    #initialize BingAsync with your Bing API key. You can also add a proxy dict as the second argument, e.g.  {'https' : 'https://myproxy.com', 'http' : 'http://myproxy.com'}
     bing_async = BingAsync('your-bing-api-key')
     
     #perform a web search
