@@ -36,7 +36,7 @@ class BingAsync(object):
         session = FuturesSession()
         session.auth = HTTPBasicAuth(self.api_key, self.api_key)
         if self.proxies and (self.proxies.get('http') or self.proxies.get('https')):
-            session.proxies = proxies
+            session.proxies = self.proxies
         return session
  
     def _process_json_responses(self, responses):
